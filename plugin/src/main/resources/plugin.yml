@@ -1,4 +1,4 @@
-name: OpenInv
+name: OpenInv-FORK
 main: com.lishid.openinv.OpenInv
 version: ${project.version}
 author: lishid
@@ -11,9 +11,6 @@ permissions:
   OpenInv.any.default:
     description: Permission for AnyContainer to default on prior to toggling.
     default: false
-  OpenInv.silent.default:
-    description: Permission for SilentContainer to default on prior to toggling.
-    default: false
   OpenInv.*:
     description: Permission for all OpenInv features.
     default: op
@@ -21,7 +18,6 @@ permissions:
       OpenInv.openinv: true
       OpenInv.openender: true
       OpenInv.search: true
-      OpenInv.silent: true
       OpenInv.anychest: true
       OpenInv.searchenchant: true
       OpenInv.searchcontainer: true
@@ -64,12 +60,6 @@ commands:
     description: Searches and lists players having a specific item in their ender chest
     usage: |-
            /<command> <Material> [MinAmount] - MinAmount is optional, the minimum amount required
-  silentcontainer:
-    aliases: [sc, silent, silentchest]
-    description: SilentContainer stops sounds and animations when using containers.
-    permission: OpenInv.silent
-    usage: |-
-           /<command> [check|on|off] - Check, toggle, or set SilentContainer
   anycontainer:
     aliases: [ac, anychest]
     description: AnyContainer allows using blocked containers.
